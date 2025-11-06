@@ -4,7 +4,7 @@
     <base target="_self">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Aniversário </title>
+    <title>Meu Aniversário Especial</title>
     <meta name="description" content="Uma apresentação especial de aniversário para minha família">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -101,10 +101,28 @@
 </head>
 <body class="min-h-screen bg-black text-white">
 
+    <!-- Tela Inicial - Vídeo de Introdução -->
+    <div id="introScreen" class="fixed inset-0 screen-container flex flex-col items-center justify-center fade-in p-4">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Uma Mensagem Especial</h1>
+            <p class="text-xl text-gray-300">Clique no vídeo para começar</p>
+        </div>
+        
+        <div class="video-wrapper">
+            <div class="video-content border-purple-500 cursor-pointer video-container"
+                 onclick="startVideoPresentation(this, 0)">
+                <video class="video-original" preload="metadata">
+                    <source src="videos/pais.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </div>
+    </div>
+
     <!-- Tela 1 - Para meus pais -->
     <div id="screen1" class="fixed inset-0 screen-container flex flex-col items-center justify-center hidden p-4">
         <div class="text-center mb-8">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Para meus pais</h1>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Para minha mãe</h1>
             <p class="text-xl text-gray-300">Clique no vídeo para continuar</p>
         </div>
         
@@ -112,7 +130,7 @@
             <div class="video-content border-blue-500 cursor-pointer video-container"
                  onclick="startVideoPresentation(this, 1)">
                 <video class="video-original" preload="metadata">
-                    <source src="videos/pais.mp4" type="video/mp4">
+                    <source src="videos/mae.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
             </div>
@@ -122,7 +140,7 @@
     <!-- Tela 2 - Para minha mãe -->
     <div id="screen2" class="fixed inset-0 screen-container flex flex-col items-center justify-center hidden p-4">
         <div class="text-center mb-8">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Para minha mãe</h1>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Para meu pai</h1>
             <p class="text-xl text-gray-300">Clique no vídeo para continuar</p>
         </div>
         
@@ -130,7 +148,7 @@
             <div class="video-content border-pink-500 cursor-pointer video-container"
                  onclick="startVideoPresentation(this, 2)">
                 <video class="video-original" preload="metadata">
-                    <source src="videos/mae.mp4" type="video/mp4">
+                    <source src="videos/pai.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
             </div>
@@ -140,7 +158,7 @@
     <!-- Tela 3 - Para meu pai -->
     <div id="screen3" class="fixed inset-0 screen-container flex flex-col items-center justify-center hidden p-4">
         <div class="text-center mb-8">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Para meu pai</h1>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Eu e o Augusto no caminhãozinho</h1>
             <p class="text-xl text-gray-300">Clique no vídeo para continuar</p>
         </div>
         
@@ -148,7 +166,25 @@
             <div class="video-content border-green-500 cursor-pointer video-container"
                  onclick="startVideoPresentation(this, 3)">
                 <video class="video-original" preload="metadata">
-                    <source src="videos/pai.mp4" type="video/mp4">
+                    <source src="videos/caminhao.mp4" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela 4 - Para meu vô -->
+    <div id="screen4" class="fixed inset-0 screen-container flex flex-col items-center justify-center hidden p-4">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Eu e o Augusto no barco</h1>
+            <p class="text-xl text-gray-300">Clique no vídeo para continuar</p>
+        </div>
+        
+        <div class="video-wrapper">
+            <div class="video-content border-yellow-500 cursor-pointer video-container"
+                 onclick="startVideoPresentation(this, 4)">
+                <video class="video-original" preload="metadata">
+                    <source src="videos/barco.mp4" type="video/mp4">
                     Seu navegador não suporta o elemento de vídeo.
                 </video>
             </div>
@@ -375,6 +411,4 @@
         document.getElementById('introScreen').classList.add('fade-in');
     </script>
 </body>
-
 </html>
-
